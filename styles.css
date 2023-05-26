@@ -1,43 +1,65 @@
-/* Add your custom CSS styles here */
-
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    background-image: url('fotodefondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
 }
 
-header {
-  background-color: #f0f0f0;
-  padding: 20px;
+h1 {
+    text-align: center;
 }
 
-h1, h2 {
-  color: #333;
+#countdown {
+    text-align: center;
+    font-size: 24px;
 }
 
-#featured-products, #how-it-works, #all-products {
-  margin-bottom: 40px;
+#message {
+    text-align: center;
 }
 
-#product-list, #product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+#background {
+    width: 100%;
+    height: 200px;
+    opacity: 0.8;
+    background-color: black;
 }
 
-.product {
-  border: 1px solid #ddd;
-  padding: 10px;
+#text-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.product img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+.image-wrapper {
+    text-align: center;
 }
 
-.product h3 {
-  margin: 10px 0;
+.image-wrapper img {
+    width: 200px;
+    height: 200px;
 }
 
-/* Add more CSS styles as needed */
+ul#trends {
+    margin-top: 20px;
+    list-style-type: square;
+}
+
+#playlist {
+    margin-top: 20px;
+}
+
+#playlist-message {
+    text-align: center;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
