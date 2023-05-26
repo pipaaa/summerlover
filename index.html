@@ -1,43 +1,44 @@
-/* Add your custom CSS styles here */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-
-h1, h2 {
-  color: #333;
-}
-
-#featured-products, #how-it-works, #all-products {
-  margin-bottom: 40px;
-}
-
-#product-list, #product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.product {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-.product img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-}
-
-.product h3 {
-  margin: 10px 0;
-}
-
-/* Add more CSS styles as needed */
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summer Countdown</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>SUMMER COUNTDOWN</h1>
+    <div id="countdown"></div>
+    <p id="message"></p>
+    <div id="background"></div>
+    <div id="text-container">
+        <div class="image-wrapper">
+            <img src="mallorca.png" alt="Mallorca">
+            <h2>Mallorca</h2>
+        </div>
+        <div class="image-wrapper">
+            <img src="costabrava.png" alt="Costa Brava">
+            <h2>Costa Brava</h2>
+        </div>
+        <div class="image-wrapper">
+            <img src="grancanaria.png" alt="Gran Canaria">
+            <h2>Gran Canaria</h2>
+        </div>
+    </div>
+    <ul id="trends">
+        <li>Tendencia 1</li>
+        <li>Tendencia 2</li>
+        <li>Tendencia 3</li>
+    </ul>
+    <div id="playlist">
+        <h3>Playlist del Verano</h3>
+        <p id="playlist-message">Próximamente</p>
+        <ul id="song-predictions">
+            <li>¿Qué canciones crees que serán elegidas?</li>
+            <li>...</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>Todos los derechos reservados</p>
+    </div>
+</body>
+</html>
