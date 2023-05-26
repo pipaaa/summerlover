@@ -1,43 +1,33 @@
-/* Add your custom CSS styles here */
+window.onload = function() {
+    // Countdown logic
+    var targetDate = new Date('June 21, 2023').getTime();
+    var countdownElement = document.getElementById('countdown');
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+    setInterval(function() {
+        var currentDate = new Date().getTime();
+        var timeRemaining = targetDate - currentDate;
 
-header {
-  background-color: #f0f0f0;
-  padding: 20px;
-}
+        var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-h1, h2 {
-  color: #333;
-}
+        countdownElement.innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's';
+    }, 1000);
 
-#featured-products, #how-it-works, #all-products {
-  margin-bottom: 40px;
-}
+    // Confetti effect
+    setInterval(function() {
+        var confetti = document.createElement('span');
+        confetti.innerHTML = '☀️';
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+        confetti.style.opacity = Math.random();
+        confetti.style.fontSize = Math.random() * 10 + 10 + 'px';
 
-#product-list, #product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
+        document.body.appendChild(confetti);
 
-.product {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-.product img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-}
-
-.product h3 {
-  margin: 10px 0;
-}
-
-/* Add more CSS styles as needed */
+        setTimeout(function() {
+            confetti.remove();
+        }, 5000);
+    }, 1000);
+};
